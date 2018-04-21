@@ -1,0 +1,20 @@
+<div class="horizontal-scroll">
+  <table class="table table-condensed">
+    <thead>
+    <tr>
+      <th><b>Pet</b></th>
+      <th><b>type</b></th>
+      <th><b>energyLevel</b></th>
+     <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in friends">
+      <td>{{item.petName}}</td>
+      <td>{{item.petType}}</td>
+      <td>{{item.energyLevel}}</td>
+      <td><button class="status-button btn btn-xs btn-info" ng-click="invite(item.id)">INVITE</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

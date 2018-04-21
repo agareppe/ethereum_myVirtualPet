@@ -1,0 +1,73 @@
+<div ba-panel ba-panel-class="profile-page">
+  <div class="panel-content">
+
+    <form ng-submit="update()">
+    <div class="progress-info">Energy Level: {{energyLevel}}</div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar"
+           aria-valuenow="{{energyLevel}}" aria-valuemin="0" aria-valuemax="100" style="width: {{energyLevel}}%">
+      </div>
+    </div>
+
+    <h3 class="with-line">Your Pet</h3>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <label for="inputFirstName" class="col-sm-3 control-label"></label>
+
+          <div class="col-sm-9">
+            <div class="userpic">
+              <div class="userpic-wrapper">
+                <img ng-src="{{ picture }}"> <!-- ng-click="uploadPicture()"-->
+              </div>
+              <!--i class="ion-ios-close-outline" ng-click="removePicture()" ng-if="!noPicture"></i>
+              <a href class="change-userpic" ng-click="uploadPicture()">Change Profile Picture</a>
+              <input type="file" ng-show="false" id="uploadFile" ng-file-select="onFileSelect($files)"-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <label for="inputFirstName" class="col-sm-3 control-label">User Name</label>
+
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputFirstName" placeholder="" ng-model="name">
+          </div>
+        </div>
+        <div class="form-group row clearfix">
+          <label for="inputLastName" class="col-sm-3 control-label">Pet Name</label>
+
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputLastName" placeholder="" ng-model="petName">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <label class="col-sm-3 control-label">PetType</label>
+
+          <div class="col-sm-9">
+            <select class="form-control" ng-options="x for x in petTypes" ng-model="petType"/>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>    
+    <button type="submit" class="btn btn-primary btn-with-icon save-profile">
+      <i class="ion-android-checkmark-circle"></i>Update
+    </button>
+    <button type="button" class="btn btn-primary btn-with-icon save-profile" ng-click="decrementEnergy()" ng-hide="!decrementEnergyVisible">
+        <i class="ion-android-checkmark-circle"></i>LessEnergy
+    </button>
+      
+
+    </form>
+  </div>
+</div>
