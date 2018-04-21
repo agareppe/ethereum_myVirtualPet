@@ -2,6 +2,7 @@
   <table class="table table-condensed">
     <thead>
     <tr>
+      <th><b></b></th>
       <th><b>Pet</b></th>
       <th><b>type</b></th>
       <th><b>energyLevel</b></th>
@@ -9,7 +10,8 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="item in friends">
+    <tr class="little-human" ng-repeat="item in friends">
+      <td  class="photo-td"><img ng-src="/assets/pictures/{{item.petType}}.png" class="little-human-picture"/></td>
       <td>{{item.petName}}</td>
       <td>{{item.petType}}</td>
       <td>{{item.energyLevel}}</td>
