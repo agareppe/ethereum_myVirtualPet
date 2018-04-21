@@ -68,6 +68,16 @@ Accept Invites and gain energy
 Admin can decrements everyones energyLevel by 2 using the LessEnergy button on his profile
 ![alt text](docs/LessEnergy.png "")
 
+## Known Bugs
+- User should not be able to invite themselfs to play
+- Manual refresh is required after actions, that can be inprove by event handling from the blockchain
+
+
+## Next steps
+- Host the pet images in PRFS ( just for fun :) )
+- Handle blockchain events
+- Add a chat between players
+- Refactor sol files to create multiple contracts and libraries
 
 License
 -------------
