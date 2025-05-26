@@ -138,7 +138,7 @@ contract VirtualPet {
         return adds;
     }
 
-    function decrementEnergyLevel(address adr, uint level) public onlyOwner(){
+    function decrementEnergyLevel(address adr, uint level) public onlyOwner {
         Player storage player = players[adr];
         if(player.vPet.energyLevel>level){
             player.vPet.energyLevel = player.vPet.energyLevel-level;
